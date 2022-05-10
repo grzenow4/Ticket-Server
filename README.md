@@ -5,7 +5,7 @@ Serwer akceptuje w linii poleceń następujące parametry:
 - `-f file` – nazwa pliku z opisem wydarzeń poprzedzona opcjonalnie ścieżką wskazującą, gdzie szukać tego pliku, obowiązkowy;
 - `-p port` – port, na którym nasłuchuje, opcjonalny, domyślnie 2022;
 - `-t timeout` – limit czasu w sekundach, opcjonalny, wartość z zakresu od 1 do 86400, domyślnie 5.
-- 
+
 Serwer powinien dokładnie sprawdzać poprawność parametrów. Błędy powinien zgłaszać, wypisując stosowny komunikat na standardowe wyjście diagnostyczne i kończąc działanie z kodem 1.
 
 Plik `file` zawiera opis wydarzeń. Każde wydarzenie opisane jest w dwóch kolejnych liniach. Pierwsza z tych linii zawiera dowolny niepusty tekst o długości co najwyżej 80 znaków (nie licząc znaku przejścia do nowej linii), niezawierający znaku o kodzie zero, będący właściwym opisem wydarzenia. Druga z tych linii zawiera liczbę dostępnych biletów. Jest to wartość z przedziału od 0 do 65535 zapisana przy podstawie dziesięć. W drugiej linii nie ma innych znaków niż cyfry. Wolno założyć, że zawartość pliku `file` jest poprawna.
